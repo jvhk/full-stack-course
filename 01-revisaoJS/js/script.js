@@ -37,3 +37,31 @@ const objFalar = {
 };
 
 objFalar.falar();
+
+
+let nome = 'Joao';
+
+function nomear(){
+    nome += ' Vitor';
+    console.log(nome);     
+}
+
+nomear();
+console.log(nome);
+
+
+
+// factory functions
+
+function criaPessoa(nome, sobrenome){
+    return {
+        nome, 
+        sobrenome,
+        fala: function (assunto){
+            return `${this.nome} está ${assunto}.`;
+        }
+    }
+}
+
+const p1 = criaPessoa('Luiz', 'Otávio');
+console.log(p1.fala(' falando sobre JS'));
