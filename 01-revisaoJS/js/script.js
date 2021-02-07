@@ -65,3 +65,63 @@ function criaPessoa(nome, sobrenome){
 
 const p1 = criaPessoa('Luiz', 'Otávio');
 console.log(p1.fala(' falando sobre JS'));
+
+
+// splice
+
+const nomes = ['maria', 'joao', 'eduardo', 'gabriel', 'julia'];
+
+// push
+//const removidos = nomes.splice(nomes.length, 0, 'marcos');
+
+//ushift
+//const removidos = nomes.splice(0, 0, 'marcos');
+
+//shift
+//const removidos = nomes.splice(0,1);
+
+// pop
+//const removidos = nomes.splice(3,2);
+
+console.log(nomes);
+
+
+
+
+/*  FILTER, MAP, REDUCE  */
+
+
+const arrayNumbers = [5,50,80,1,2,3,4,5,8,7,11,15,22,27];
+
+function callbackFilter (value){
+    return (value>10);
+}
+
+const filterNumbers = arrayNumbers.filter(callbackFilter);
+console.log(filterNumbers);
+
+
+const pessoas = [
+    {nome: 'Luiz', idade: 62},
+    {nome: 'Maria', idade: 23},
+    {nome: 'Eduardo', idade: 55},
+    {nome: 'Letícia', idade: 19},
+    {nome: 'Rosana', idade: 32},
+    {nome: 'Wallace', idade: 47}
+];
+
+const pessoasComNomeGrande = pessoas.filter((value)=>{
+    return (value.nome.length >= 5);
+});
+
+
+const pessoasMaisCinquentaAnos = pessoas.filter((value)=>{
+    return (value.idade >= 50);
+});
+
+
+const pessoasNomeTerminaComA = pessoas.filter((value)=>{
+    return (value.nome.toLowerCase().endsWith('a'));
+});
+
+console.log(pessoasNomeTerminaComA);
