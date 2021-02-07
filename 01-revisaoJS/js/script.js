@@ -91,6 +91,8 @@ console.log(nomes);
 /*  FILTER, MAP, REDUCE  */
 
 
+// Filter -> filtra os elementos de um array
+
 const arrayNumbers = [5,50,80,1,2,3,4,5,8,7,11,15,22,27];
 
 function callbackFilter (value){
@@ -127,7 +129,7 @@ const pessoasNomeTerminaComA = pessoas.filter((value)=>{
 console.log(pessoasNomeTerminaComA);
 
 
-// MAP
+// MAP -> alterar os elementos de um array
 
 const numbers = [5,50,80,1,2,3,4,5,8,7,11,15,22,27];
 
@@ -150,3 +152,35 @@ const justNames = names.map((obj) => {
 
 console.log(numerosDobrados);
 console.log(justNames);
+
+
+// Reduce -> reduzir um array a um elemento
+
+
+const numbers2 = [5,50,80,1,2,3,4,5,8,7,11,15,22,27];
+
+const total = numbers2.reduce((acumulador, valor, indice, array) =>{
+    acumulador += valor;
+    return acumulador;
+}, 0);   // valor inicial do acumulador "0"
+
+console.log(total);
+
+
+
+const pessoas2 = [
+    {nome: 'Luiz', idade: 62},
+    {nome: 'Maria', idade: 23},
+    {nome: 'Eduardo', idade: 55},
+    {nome: 'Letícia', idade: 19},
+    {nome: 'Rosana', idade: 32},
+    {nome: 'Wallace', idade: 47}
+];
+
+const maisVelha = pessoas2.reduce((acumulador, valor) => {
+    if (acumulador.idade > valor.idade)
+        return acumulador;
+    return valor;
+});
+
+console.log(maisVelha);
