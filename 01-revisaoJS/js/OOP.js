@@ -63,3 +63,15 @@ console.log(outraCoisa);
 console.log(caneca);
 
 
+/*   PROTOTYPES    */
+
+function Pessoa(nome, sobrenome){
+    this.nome = nome;
+    this.sobrenome = sobrenome;
+    this.nomeCompleto = () => this.nome + ' ' + this.sobrenome;
+}
+
+Pessoa.prototype.estouAqui = "Estou aqui";
+
+const pessoa1 = new Pessoa('Joao', 'Vitor');
+const pessoa2 = new Pessoa('Marcos', 'Vinicius');
