@@ -145,3 +145,33 @@ const product3 = Object.create(Product.prototype, {
 product3.aumento(30);
 
 console.log(product3);
+
+
+/*  HERANÇA */
+
+function Produtos(nome, preco){
+    this.nome = nome;
+    this.preco = preco;
+}
+
+Produtos.prototype.aumento = function(quantia) {
+    this.preco += quantia; 
+};
+
+Produtos.prototype.desconto = function(quantia) {
+    this.preco -= quantia; 
+};
+
+function Blusa(nome, preco, cor){
+    Produtos.call(this, nome, preco);
+    this.cor = cor;
+};
+
+Blusa.prototype = Object.create(Produtos.prototype);
+Blusa.prototype.constructor = Blusa;
+
+const caneta = new Produtos('Caneta', 7.5);
+const blusa = new Blusa('Regata', 7.5, 'Preta');
+
+console.log(caneta);
+console.log(blusa);
