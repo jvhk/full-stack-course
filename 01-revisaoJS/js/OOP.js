@@ -246,3 +246,42 @@ const cp = new ContaPoupanca(12, 33, 0);
 cp.depositar(10);
 cp.sacar(110);
 cp.sacar(1);
+
+
+/* FACTORY FUNCTIONS E PROTOTYPES */
+console.log("---- FACTORY FUNCTIONS E PROTOTYPES -------");
+
+const falar = {
+    falar(nome){
+        console.log(`${this.nome} está falando!`);
+    }
+};
+
+const comer = {
+    comer(nome){
+        console.log(`${this.nome} está comendo!`);
+    }
+};
+
+const beber = {
+    beber(nome){
+        console.log(`${this.nome} está bebendo!`);
+    }
+};
+
+//const personPrototype = {...falar, ...comer, ...beber};
+//ou
+const personPrototype = Object.assign({}, falar, comer, beber);
+
+function criarPessoa(nome, sobrenome){
+    return Object.create(personPrototype, {
+        nome : {value : nome},
+        sobrenome : {value : sobrenome}
+    });
+}
+
+const person1 = criarPessoa('Luiz', 'Otávio');
+const person2 = criarPessoa('Maria', 'Aparecida');
+
+console.log(person1);
+console.log(person2);
