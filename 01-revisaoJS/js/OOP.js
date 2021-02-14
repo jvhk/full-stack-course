@@ -285,3 +285,43 @@ const person2 = criarPessoa('Maria', 'Aparecida');
 
 console.log(person1);
 console.log(person2);
+
+
+
+
+/* Objeto MAP */
+console.log("---- Objeto MAP -------");
+
+const registros = [
+    { id : 3, nome : 'Luiz' },
+    { id : 2, nome : 'Maria' },
+    { id : 1, nome : 'Helena' }
+];
+
+/*              SEM MAP
+const novosRegistros = {};
+
+for(const {id, nome} of registros){
+    console.log(id, nome);
+};
+*/
+
+const novosRegistros = new Map();
+
+for(const registro of registros){
+    const { id } = registro;
+    novosRegistros.set(id, { ...registros});
+};
+
+for(const [identifier, {id, nome}] of novosRegistros){
+    console.log(identifier, id, nome);
+}
+
+for(const registro of novosRegistros.keys()){
+    console.log(registro);
+}
+
+for(const registro of novosRegistros.values()){
+    console.log(registro);
+}
+//console.log(novosRegistros);
