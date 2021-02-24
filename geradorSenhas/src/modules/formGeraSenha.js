@@ -10,6 +10,7 @@ const gerarSenha = document.querySelector('.gerar-senha')
 
 export default () => {
     gerarSenha.addEventListener('click', () => {
+        //console.log(checkSimbolos.checked);
         senhaGerada.innerHTML = gera();
     });
 };

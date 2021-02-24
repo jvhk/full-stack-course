@@ -23,6 +23,7 @@ var checkSimbolos = document.querySelector('.chk-simbolos');
 var gerarSenha = document.querySelector('.gerar-senha');
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (function () {
   gerarSenha.addEventListener('click', function () {
+    //console.log(checkSimbolos.checked);
     senhaGerada.innerHTML = gera();
   });
 });
@@ -45,25 +46,25 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ geraSenha)
 /* harmony export */ });
 var rand = function rand(min, max) {
-  Math.floor(Math.random() * (max - min) + min);
+  return Math.floor(Math.random() * (max - min) + min);
 };
 
 var geraMaiuscula = function geraMaiuscula() {
-  String.fromCharCode(rand(65, 91));
+  return String.fromCharCode(rand(65, 91));
 };
 
 var geraMinuscula = function geraMinuscula() {
-  String.fromCharCode(rand(97, 123));
+  return String.fromCharCode(rand(97, 123));
 };
 
 var geraNumero = function geraNumero() {
-  String.fromCharCode(rand(48, 58));
+  return String.fromCharCode(rand(48, 58));
 };
 
 var simbolos = ',.;~^[]{}!@#$%*()_+=-';
 
 var geraSimbolo = function geraSimbolo() {
-  simbolos[rand(0, simbolos.length)];
+  return simbolos[rand(0, simbolos.length)];
 };
 
 function geraSenha(qtd, maiusculas, minusculas, numeros, simbolos) {
@@ -610,6 +611,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _assets_css_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./assets/css/style.css */ "./src/assets/css/style.css");
 
 
+(0,_modules_formGeraSenha__WEBPACK_IMPORTED_MODULE_0__.default)();
 })();
 
 /******/ })()
