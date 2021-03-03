@@ -22,4 +22,9 @@ class Pessoa{
     }
 }
 
+module.exports = function(x,y) {
+    return x*y;
+}
+
+
 exports.Pessoa = Pessoa;
