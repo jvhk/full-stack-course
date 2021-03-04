@@ -2,6 +2,9 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+//para pegar o body no post
+app.use(express.urlencoded({extended : true}));
+
 // Read
 app.get('/', (req, res) => {
     res.send(`
@@ -12,11 +15,13 @@ app.get('/', (req, res) => {
     `);
 });
 
-app.get('/contato', (req, res) => {
-    res.send('Pagina Contato!');
-});
+//req params
+app.get('/testes/:idUsuarios?', (req, res) => {
+  res.send(req.params.idUsuarios);
+})
 
 app.post('/', (req,res) =>{
+    console.log(req.body);
     res.send("Recebi o formulario");
 });
 
