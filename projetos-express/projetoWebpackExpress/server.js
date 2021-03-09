@@ -1,6 +1,14 @@
+require('dotenv').config();
 const express = require('express');
 const path = require('path');
 const app = express();
+const mongoose = require('mongoose');
+
+mongoose.connect(process.env.CONNECTIONSTRING , {useNewUrlParser:true , useUnifiedTopology:true})
+    .then(() => {
+        app.emit('Pronto');
+    }).catch(e => console.log(e));
+
 const port = 3000;
 const routes = require('./routes');
 
@@ -19,4 +27,7 @@ app.set('view engine', 'ejs');
 app.use(meuMiddleware);
 app.use(routes);
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+
+app.on('Pronto', () => {
+    app.listen(port, () => console.log(`Example app listening on port ${port}!`));
+})
