@@ -17,7 +17,7 @@ const path = require('path');
 const port = 3000;
 const helmet = require('helmet');
 const csrf = require('csurf');
-const {meuMiddleware, checkCsrfError } = require('./src/middleware/middleware');
+const {meuMiddleware, checkCsrfError, csrfMiddleware } = require('./src/middleware/middleware');
 
 app.use(helmet());
 
@@ -49,6 +49,7 @@ app.use(csrf({cookie: true}));
 //Meu middleware do arquivo middleware.js
 app.use(meuMiddleware);
 app.use(checkCsrfError);
+app.use(csrfMiddleware);
 app.use(routes);
 
 
