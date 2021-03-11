@@ -1,6 +1,6 @@
 require('dotenv').config();
 const express = require('express');
-const path = require('path');
+
 const app = express();
 const mongoose = require('mongoose');
 
@@ -12,11 +12,14 @@ mongoose.connect(process.env.CONNECTIONSTRING , {useNewUrlParser:true , useUnifi
 const session = require('express-session');
 const MongoStore = require('connect-mongo').default;
 const flash = require('connect-flash');
-
-const port = 3000;
 const routes = require('./routes');
+const path = require('path');
+const port = 3000;
+const helmet = require('helmet');
+const csrf = require('csurf');
+const {meuMiddleware, checkCsrfError } = require('./src/middleware/middleware');
 
-const meuMiddleware = require('./src/middleware/middleware');
+app.use(helmet());
 
 //para pegar o body no post
 app.use(express.urlencoded({extended : true}));
@@ -41,11 +44,15 @@ app.use(flash());
 app.set('views', path.resolve(__dirname, 'src', 'views'));
 app.set('view engine', 'ejs');
 
+app.use(csrf({cookie: true}));
+
 //Meu middleware do arquivo middleware.js
 app.use(meuMiddleware);
+app.use(checkCsrfError);
 app.use(routes);
 
 
 app.on('Pronto', () => {
-    app.listen(port, () => console.log(`Example app listening on port ${port}!`));
-})
+    app.listen(port, () => 
+        console.log(`Example app listening on port ${port}!`));
+});
