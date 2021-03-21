@@ -27,7 +27,7 @@ Contato.prototype.register = async function() {
   this.contato = await ContatoModel.create(this.body);
 }
 
-Contato.prototype.valida() = function(){
+Contato.prototype.valida = function(){
   this.cleanUp();
 
   if(this.body.email && !validator.isEmail(this.body.email)) this.errors.push('E-mail inválido');
