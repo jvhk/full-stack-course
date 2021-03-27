@@ -4,7 +4,7 @@ class UserController {
   async store(req, res) {
     try {
       const novoUser = await User.create(req.body);
-      const { id, nome, email } = novoUser;
+      // const { id, nome, email } = novoUser;
       return res.json(novoUser);
     } catch (e) {
       return res.status(400).json({
@@ -37,6 +37,8 @@ class UserController {
 
   // Update
   async update(req, res) {
+    console.log();
+    console.log('ENTREI NO TRY 1 DO UPDATE');
     try {
       const user = await User.findByPk(req.userId);
 
@@ -48,7 +50,7 @@ class UserController {
 
       const novosDados = await user.update(req.body);
       console.log();
-      console.log('ENTREI NO TRY DO UPDATE');
+      console.log('ENTREI NO TRY 2 DO UPDATE');
       const { id, nome, email } = novosDados;
 
       return res.json({ id, nome, email });
