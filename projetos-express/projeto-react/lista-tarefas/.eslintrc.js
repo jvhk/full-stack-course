@@ -22,5 +22,6 @@ module.exports = {
     'react/no-unused-state': 0,
     'react/jsx-filename-extension': 0,
     'react/state-in-constructor': 0,
+    'import/no-duplicates': 0,
   },
 };
