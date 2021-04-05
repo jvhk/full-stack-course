@@ -12,14 +12,14 @@
     text-align: center;
 }
 
-form{
+.form{
     margin-top: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-form input[type="text"]{
+.form input[type="text"]{
     height: 40px;
     padding: 0 20px;
     font-size: 20px;
@@ -27,7 +27,7 @@ form input[type="text"]{
     min-width: 80%;
 }
 
-form button[type="submit"]{
+.form button[type="submit"]{
     border: none;
     height: 40px;
     width: 40px;
@@ -71,4 +71,9 @@ form button[type="submit"]{
 .tarefas li .edit,.tarefas li .delete{
     cursor: pointer;
     transition: all 600ms;
+}
+
+.tarefas li span{
+    display: flex;
+    align-items: center;
 }
