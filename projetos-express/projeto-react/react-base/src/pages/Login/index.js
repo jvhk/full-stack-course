@@ -10,7 +10,7 @@ export default function Login() {
         <small>Ola</small>
       </Title>
       <Paragrafo>lorem ipsum</Paragrafo>
-      <a href="">Ola, eu sou um link</a>
+      <button type="button">Enviar</button>
     </Container>
   );
 }
