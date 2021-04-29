@@ -7,8 +7,6 @@ import Login from '../pages/Login/index';
 import Page404 from '../pages/Page404/index';
 
 export default function Routes() {
-  toast.success('Oi, sucesso');
-  toast.error('Oi, ERRO!');
   return (
     <Switch>
       <MyRoute exact path="/" component={Login} />
