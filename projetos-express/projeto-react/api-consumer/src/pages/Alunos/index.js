@@ -9,7 +9,7 @@ import {
 } from 'react-icons/fa';
 
 import { Container } from '../../styles/globalStyles';
-import { AlunoContainer, ProfilePicture } from './styled';
+import { AlunoContainer, ProfilePicture, NovoAluno } from './styled';
 
 import axios from '../../services/axios';
 
@@ -63,6 +63,9 @@ export default function Alunos() {
     <Container>
       <Loading isLoading={isLoading} />
       <h1>ALUNOS</h1>
+
+      <NovoAluno to="/aluno">Novo aluno</NovoAluno>
+
       <AlunoContainer>
         {alunos.map((aluno, index) => {
           <div key={String(aluno.id)}>
