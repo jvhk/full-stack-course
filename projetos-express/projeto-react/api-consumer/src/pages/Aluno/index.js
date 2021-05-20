@@ -4,16 +4,15 @@ import PropTypes from 'prop-types';
 import { isEmail, isInt, isFloat } from 'validator';
 import { toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
-import {FaEdit, FaUserCircle} from 'react-icons/fa';
-import {Link} from 'react-router-dom';
+import { FaEdit, FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 import { Container } from '../../styles/globalStyles';
-import { Form, ProfilePicture,Title } from './styled';
+import { Form, ProfilePicture, Title } from './styled';
 import Loading from '../../components/Loading';
 import axios from '../../services/axios';
 import history from '../../services/history';
 import * as actions from '../../store/modules/auth/actions';
-
 
 export default function Aluno({ match }) {
   const dispatch = useDispatch();
@@ -152,7 +151,7 @@ export default function Aluno({ match }) {
 
       {id && (
         <ProfilePicture>
-          {foto ? (<img src={foto} alt={nome}/>) : (<FaUserCircle size={180} />}
+          {foto ? <img src={foto} alt={nome} /> : <FaUserCircle size={180} />}
           <Link to={`/fotos/${id}`}>
             <FaEdit size={24} />
           </Link>
