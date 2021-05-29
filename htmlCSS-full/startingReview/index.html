@@ -5,52 +5,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atributos id e class</title>
-
-    <style>
-        .background-red {
-            background-color: red;
-        }
-
-        #heading-one {
-            font-size: 2rem;
-        }
-
-        #heading-two {
-            font-size: 6rem;
-        }
-    </style>
+    <title>Semântica na estrutura do HTML5</title>
 </head>
 
 <body>
-    <h1 id="heading-one" class="background-red">
-        Heading
-    </h1>
-    <p style="font-style: italic;">Lorem ipsum dolor, <b> amet </b>consectetur adipisicing elit. Ullam fugiat harum
-        corporis! Inventore rem a
-        <q cite="https://google.com.br"> beatae </q> debitis eius architecto. <del>Repellat</del> quia
-        <small>voluptate</small> numquam nihil et placeat dolor autem
-        quaerat.
-        <hr>
-        <code>console.log()</code> Lorem ipsum dolor, sit amet consectetur adipisicing elit. At, eveniet fugiat? Itaque
-        provident debitis ipsum nihil commodi omnis laboriosam sit voluptate, quia odit tenetur consequatur voluptates
-        molestiae officia fugit aut!
-        <img src="https://lolg-cdn.porofessor.gg/img/banner2.png" style="background-color: rosybrown;" alt="">
-    </p>
+    <header>
+        <h1>
+            <a href="#">Home</a>
+        </h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam quo blanditiis fugit vel sapiente dolorem, harum, non nostrum maxime officiis suscipit, modi ratione error quia! Suscipit ex dignissimos magni.</p>
+        <div>Alinhar algo</div>
+    </header>
 
-    <ul>
-        <li><a href="">Pagina inical</a></li>
-        <li><a href="">Sobre</a></li>
-        <li><a href="">Contatos</a></li>
-    </ul>
+    <aside>
+        <nav>
+            <ul>
+                <li><a href="#">Texto 1</a></li>
+                <li><a href="#">Texto 1</a></li>
+                <li><a href="#">Texto 1</a></li>
+                <li><a href="#">Texto 1</a></li>
+                <li><a href="#">Texto 1</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <ol>
-        <li><a href="">Café</a></li>
-        <li><a href="">Pão</a></li>
-        <li><a href="">Maçã</a></li>
-    </ol>
+    <section>
+        <header>
+            <h2>Roupas femininas</h2>
+            <article>
+                <h3>Heading do article</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quas qui illo officiis ducimus asperiores id deleniti, magnam sit debitis illum eaque ipsa. Inventore, reiciendis. Veritatis debitis veniam perspiciatis a?</p>
+            </article>
+        </header>
+    </section>
 
-    <blockquote>Aqui estou fazendo um bloco especifico de citação</blockquote>
+    <article>
+        <h2>H2 do article com section dentro</h2>
+        <section>
+            <header>
+                <h2>H2 dentro da section do article</h2>
+            </header>
+        </section>
+    </article>
+
+    <div>
+        <article>
+            <header>
+                <h2>Header</h2>
+            </header>
+            <div>Oi</div>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iure sint, sunt vel placeat vitae aperiam eveniet deleniti, totam quis commodi temporibus explicabo reiciendis repellat nam assumenda. Magni, minima cum.</p>
+            <footer>Rodapé da div</footer>
+        </article>
+    </div>
+
+    <section>
+        <header>
+            <h2>Roupas Masculinas</h2>
+            <article>
+                <h3>Heading do article</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quas qui illo officiis ducimus asperiores id deleniti, magnam sit debitis illum eaque ipsa. Inventore, reiciendis. Veritatis debitis veniam perspiciatis a?</p>
+            </article>
+        </header>
+    </section>
+
+    <footer>
+        Meu endereço no footer maior
+    </footer>
 </body>
 
 </html>
