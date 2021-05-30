@@ -6,72 +6,56 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Semântica na estrutura do HTML5</title>
+
+    <style>
+        *{
+            margin:0;
+            padding: 0;
+        }
+
+        body{
+            background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/8dc3f88b-a96a-4d8a-af9a-a69e6f3b2506/5c809235-fe67-4a98-af86-95a0a5a51e74/BR-pt-20210524-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+            background-size: conver;
+            background-position: top center;
+        }
+
+        #heading{
+            background: rgba(0 , 0, 0, 0.7);
+        }
+
+        #heading div{
+            width: 90%;
+            display: flex;
+            justify-content: space-between;
+            margin: 0 auto;
+        }
+
+        #heading .h1 {
+            padding:15px 0;
+            font-size: 20px;
+            text-transform: uppercase;
+            color: #fff;
+        }
+
+        #heading a{
+            text-decoration: none;
+            color: #fff;
+            font-family: sans-serif;
+        }
+    </style>
 </head>
 
 <body>
-    <header>
-        <h1>
-            <a href="#">Home</a>
-        </h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda aliquam quo blanditiis fugit vel sapiente dolorem, harum, non nostrum maxime officiis suscipit, modi ratione error quia! Suscipit ex dignissimos magni.</p>
-        <div>Alinhar algo</div>
+    <header id="heading">
+        <div>
+            <h1 class="h1">
+                <a href="#">Netflix</a>
+            </h1>
+            <h2 class="h1">
+                <a href="#">Netflix</a>
+            </h2>
+        </div>
     </header>
-
-    <aside>
-        <nav>
-            <ul>
-                <li><a href="#">Texto 1</a></li>
-                <li><a href="#">Texto 1</a></li>
-                <li><a href="#">Texto 1</a></li>
-                <li><a href="#">Texto 1</a></li>
-                <li><a href="#">Texto 1</a></li>
-            </ul>
-        </nav>
-    </aside>
-
-    <section>
-        <header>
-            <h2>Roupas femininas</h2>
-            <article>
-                <h3>Heading do article</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quas qui illo officiis ducimus asperiores id deleniti, magnam sit debitis illum eaque ipsa. Inventore, reiciendis. Veritatis debitis veniam perspiciatis a?</p>
-            </article>
-        </header>
-    </section>
-
-    <article>
-        <h2>H2 do article com section dentro</h2>
-        <section>
-            <header>
-                <h2>H2 dentro da section do article</h2>
-            </header>
-        </section>
-    </article>
-
-    <div>
-        <article>
-            <header>
-                <h2>Header</h2>
-            </header>
-            <div>Oi</div>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Pariatur iure sint, sunt vel placeat vitae aperiam eveniet deleniti, totam quis commodi temporibus explicabo reiciendis repellat nam assumenda. Magni, minima cum.</p>
-            <footer>Rodapé da div</footer>
-        </article>
-    </div>
-
-    <section>
-        <header>
-            <h2>Roupas Masculinas</h2>
-            <article>
-                <h3>Heading do article</h3>
-                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci quas qui illo officiis ducimus asperiores id deleniti, magnam sit debitis illum eaque ipsa. Inventore, reiciendis. Veritatis debitis veniam perspiciatis a?</p>
-            </article>
-        </header>
-    </section>
-
-    <footer>
-        Meu endereço no footer maior
-    </footer>
 </body>
 
 </html>
