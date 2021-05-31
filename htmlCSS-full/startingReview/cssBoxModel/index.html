@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box model</title>
+
+    <style>
+        .section-one, .section-two{
+            box-sizing: border-box;
+        }
+
+        .section-one{
+            width: 200px;
+            height: 150px;
+            background-color: deeppink;
+            border:5px solid black; 
+            padding: 15px;
+            margin: 20px;
+        }
+
+        .section-two{
+            
+            width: 200px;
+            height: 150px;
+            background-color: cyan;
+            border:5px solid black; 
+            padding: 15px;
+            margin: 20px;
+            border-bottom-width: 10px;
+            border-bottom-color:red ;
+            border-bottom-style: dashed;
+
+        }
+    </style>
+</head>
+<body>
+    <section class="section-one">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia reiciendis, molestiae iure repellendus voluptas explicabo quod perferendis asperiores commodi consectetur porro, soluta eaque repellat magni.</section>
+    <section class="section-two">2</section>
+</body>
+</html>
