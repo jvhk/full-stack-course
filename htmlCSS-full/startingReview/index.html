@@ -9,28 +9,63 @@
 
     <style>
         *{
-            margin:0;
-            padding: 0;
         }
 
         body{
             font-family: sans-serif;
         }    
+
+        label{
+            cursor: pointer;
+        }
     </style>
 </head>
 
 <body>
     <form action="#" method="" target="_blank" autocomplete="off">
-        <section>
-            <h1>Cabeça</h1>
-            <p>O formaulario</p>
-            <fieldset>
-                <legend>Descrição</legend>
-                <p>
-                    <input type="text" name="" id="">
-                </p>
-            </fieldset>
-        </section>
+        <p>O formulário</p>
+        <p>
+            <p>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nomes" id="nome" placeholder="Seu nome" value="João">           
+            </p>
+
+            <p>
+                <label for="dev">Sou um dev</label>
+                <input type="checkbox" id="dev" value="sim">        
+            </p>
+
+            <p>
+                <label for="dev1">Sou um dev1</label>
+                <input type="checkbox" id="dev1" value="sim">        
+            </p>
+
+            <p>
+                <label for="dev2">Sou um dev2</label>
+                <input type="checkbox" id="dev2" value="sim">        
+            </p>
+        </p>
+        <p>
+            Gênero:<br>
+            <p>
+                <label for="feminino">feminino</label>
+                <input type="radio" id="feminino" value="sim" name="genero">        
+            </p>
+
+            <p>
+                <label for="masculino">masculino</label>
+                <input type="radio" id="masculino" value="sim" name="genero">        
+            </p>
+
+            <p>
+                <label for="nao-informar">prefiro nao informar</label>
+                <input type="radio" id="nao-informar" value="sim" name="genero">        
+            </p>
+        </p>
+        <p>
+            <button type="submit">Enviar</button>
+            <button type="reset">Reset</button>
+        </p>
     </form>
 </body>
 
