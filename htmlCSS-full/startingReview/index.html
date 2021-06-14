@@ -8,9 +8,6 @@
     <title>Semântica na estrutura do HTML5</title>
 
     <style>
-        *{
-        }
-
         body{
             font-family: sans-serif;
         }    
@@ -101,6 +98,51 @@
         <p>
             <label for="number">Número:</label>
             <input type="number" name="number" id="number" placeholder="Digite um número" min="0" max="50">
+        </p>
+
+        <p>
+            <label for="password">Senha:</label>
+            <input type="password" name="password" id="password" placeholder="Digite sua senha">
+        </p>
+
+        <p>
+            <label for="range">Range:</label>
+            <input type="range" name="range" id="range" list="browsers">
+
+            <datalist id="browsers">
+                <option value="Chrome">
+                <option value="Firefox">
+                <option value="Internet Explorer">
+                <option value="Opera">
+                <option value="Safari">
+              </datalist>
+        </p>
+
+        <p>
+            <label for="url">SUA URL:</label>
+            <input type="url" name="url" id="url" placeholder="URL">
+        </p>
+
+        <p>
+            <label for="search">Search:</label>
+            <input type="search" name="search" id="search" placeholder="Search">
+        </p>
+
+        <p>
+            <label for="select">Select some options:</label>
+            <select name="select" id="select">
+                <optgroup label="Teste">
+                    <option value="qualquer1" label="Isso é o que aparece na tela1"></option>
+                    <option value="qualquer2" label="Isso é o que aparece na tela2"></option>
+                    <option value="qualquer3" label="Isso é o que aparece na tela3"></option>
+                    <option value="qualquer4" label="Isso é o que aparece na tela4" selected></option>
+                </optgroup>
+            </select>
+        </p>
+
+        <p>
+            <label for="textarea">Textarea:</label>
+            <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
         </p>
 
         <p>
