@@ -3,11 +3,32 @@
     margin: 0;
 }
 
-
-.pai .um~.dois{
-    color: red;
+.heading{
+    transition: all 300ms ease-in-out;
 }
 
-[bottom]{
-    color: darkmagenta;
+.heading:hover{
+    background: red;
+}
+
+a:link{
+    color: deeppink;
+}
+
+a:visited{
+    color: firebrick;
+}
+
+a:hover{
+    background: darksalmon;
+    color: white;
+    text-decoration: none;
+}
+
+input:focus{
+    box-shadow: rgba(0, 0, 0, 0.5);
+}
+
+input:disabled{
+    background-color: seagreen;
 }
