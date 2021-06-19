@@ -3,36 +3,11 @@
     margin: 0;
 }
 
-.heading{
-    transition: all 300ms ease-in-out;
+
+ul li:nth-child(even){
+    background-color:rebeccapurple ;
 }
 
-.heading:hover{
-    background: red;
-}
-
-a:link{
-    color: deeppink;
-}
-
-a:visited{
-    color: firebrick;
-}
-
-a:hover{
-    background: darksalmon;
-    color: white;
-    text-decoration: none;
-}
-
-input:focus{
-    box-shadow: rgba(0, 0, 0, 0.5);
-}
-
-input:disabled{
-    background-color: seagreen;
-}
-
-p:not(.meio){
-    color: blue;
+ul li:nth-child(odd){
+    background-color:darkturquoise ;
 }
