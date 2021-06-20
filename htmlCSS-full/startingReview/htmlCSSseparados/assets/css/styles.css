@@ -11,3 +11,30 @@ ul li:nth-child(even){
 ul li:nth-child(odd){
     background-color:darkturquoise ;
 }
+
+ul li::after{
+    content: ' - ';
+    background: red;
+    color: #fff;
+    display: block;
+}
+
+ul li::before{
+    content: ' * ';
+}
+
+p::first-letter{
+    font-size: 20px;
+    display: block;
+    float: left;
+    margin: 0 10 10 0;
+}
+
+p::first-line{
+    background: lightblue;
+}
+
+p::selection{
+    background: black;
+    color: white;
+}
