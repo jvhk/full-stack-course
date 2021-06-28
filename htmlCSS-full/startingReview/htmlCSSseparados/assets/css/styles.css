@@ -3,11 +3,9 @@
     margin: 0;
 }
 
-
-#p{
+#texto{
     color: red;
+    font-family: sans-serif;
+    font-size: 70px;
 }
 
-.p{
-    color: hotpink;
-}
